@@ -1,0 +1,18 @@
+type: code
+files:
+- name: src/Main.kt
+  visible: true
+  text: |-
+    fun main() {
+        // put your code here
+    }
+  learner_created: false
+feedback_link: https://hyperskill.org/learn/step/11228
+status: Solved
+feedback:
+  message: |-
+    <html>desert you
+
+    <br/><br/>Continue on <a href="https://hyperskill.org/learn/step/11228">JetBrains Academy</a></html>
+  time: Wed, 28 Oct 2020 05:37:43 UTC
+record: -1

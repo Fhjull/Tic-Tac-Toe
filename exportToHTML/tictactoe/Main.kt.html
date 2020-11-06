@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>Main.kt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #0033b3;}
+.s1 { color: #080808;}
+.s2 { color: #1750eb;}
+.s3 { color: #067d17;}
+.s4 { color: #0037a6;}
+</style>
+</head>
+<body bgcolor="#ffffff">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.kt</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">tictactoe</span>
+
+
+<span class="s0">fun </span><span class="s1">wins(b: String, a: CharArray): Boolean {</span>
+    <span class="s0">val </span><span class="s1">c = b.first().toUpperCase()</span>
+    <span class="s0">return </span><span class="s1">a[</span><span class="s2">0</span><span class="s1">] == c &amp;&amp; a[</span><span class="s2">1</span><span class="s1">] == c &amp;&amp; a[</span><span class="s2">2</span><span class="s1">] == c ||</span>
+            <span class="s1">a[</span><span class="s2">3</span><span class="s1">] == c &amp;&amp; a[</span><span class="s2">4</span><span class="s1">] == c &amp;&amp; a[</span><span class="s2">5</span><span class="s1">] == c ||</span>
+            <span class="s1">a[</span><span class="s2">6</span><span class="s1">] == c &amp;&amp; a[</span><span class="s2">7</span><span class="s1">] == c &amp;&amp; a[</span><span class="s2">8</span><span class="s1">] == c ||</span>
+            <span class="s1">a[</span><span class="s2">0</span><span class="s1">] == c &amp;&amp; a[</span><span class="s2">3</span><span class="s1">] == c &amp;&amp; a[</span><span class="s2">6</span><span class="s1">] == c ||</span>
+            <span class="s1">a[</span><span class="s2">1</span><span class="s1">] == c &amp;&amp; a[</span><span class="s2">4</span><span class="s1">] == c &amp;&amp; a[</span><span class="s2">7</span><span class="s1">] == c ||</span>
+            <span class="s1">a[</span><span class="s2">2</span><span class="s1">] == c &amp;&amp; a[</span><span class="s2">5</span><span class="s1">] == c &amp;&amp; a[</span><span class="s2">8</span><span class="s1">] == c ||</span>
+            <span class="s1">a[</span><span class="s2">0</span><span class="s1">] == c &amp;&amp; a[</span><span class="s2">4</span><span class="s1">] == c &amp;&amp; a[</span><span class="s2">8</span><span class="s1">] == c ||</span>
+            <span class="s1">a[</span><span class="s2">2</span><span class="s1">] == c &amp;&amp; a[</span><span class="s2">4</span><span class="s1">] == c &amp;&amp; a[</span><span class="s2">6</span><span class="s1">] == c</span>
+<span class="s1">}</span>
+
+<span class="s0">fun </span><span class="s1">printGrid(a: CharArray) {</span>
+    <span class="s1">println(</span><span class="s3">&quot;---------&quot;</span><span class="s1">)</span>
+    <span class="s1">println(</span><span class="s3">&quot;| </span><span class="s4">${</span><span class="s1">a[</span><span class="s2">0</span><span class="s1">]</span><span class="s4">} ${</span><span class="s1">a[</span><span class="s2">1</span><span class="s1">]</span><span class="s4">} ${</span><span class="s1">a[</span><span class="s2">2</span><span class="s1">]</span><span class="s4">} </span><span class="s3">|&quot;</span><span class="s1">)</span>
+    <span class="s1">println(</span><span class="s3">&quot;| </span><span class="s4">${</span><span class="s1">a[</span><span class="s2">3</span><span class="s1">]</span><span class="s4">} ${</span><span class="s1">a[</span><span class="s2">4</span><span class="s1">]</span><span class="s4">} ${</span><span class="s1">a[</span><span class="s2">5</span><span class="s1">]</span><span class="s4">} </span><span class="s3">|&quot;</span><span class="s1">)</span>
+    <span class="s1">println(</span><span class="s3">&quot;| </span><span class="s4">${</span><span class="s1">a[</span><span class="s2">6</span><span class="s1">]</span><span class="s4">} ${</span><span class="s1">a[</span><span class="s2">7</span><span class="s1">]</span><span class="s4">} ${</span><span class="s1">a[</span><span class="s2">8</span><span class="s1">]</span><span class="s4">} </span><span class="s3">|&quot;</span><span class="s1">)</span>
+    <span class="s1">println(</span><span class="s3">&quot;---------&quot;</span><span class="s1">)</span>
+<span class="s1">}</span>
+
+<span class="s0">fun </span><span class="s1">main() {</span>
+    <span class="s0">val </span><span class="s1">a = charArrayOf(</span><span class="s3">' '</span><span class="s1">, </span><span class="s3">' '</span><span class="s1">, </span><span class="s3">' '</span><span class="s1">, </span><span class="s3">' '</span><span class="s1">, </span><span class="s3">' '</span><span class="s1">, </span><span class="s3">' '</span><span class="s1">, </span><span class="s3">' '</span><span class="s1">, </span><span class="s3">' '</span><span class="s1">, </span><span class="s3">' '</span><span class="s1">)</span>
+
+    <span class="s1">printGrid(a)</span>
+
+    <span class="s0">var </span><span class="s1">x: Int</span>
+    <span class="s0">var </span><span class="s1">y: Int</span>
+    <span class="s0">for </span><span class="s1">(i </span><span class="s0">in </span><span class="s2">1</span><span class="s1">..Int.MAX_VALUE) {</span>
+        <span class="s0">while </span><span class="s1">(</span><span class="s0">true</span><span class="s1">) {</span>
+            <span class="s1">print(</span><span class="s0">if </span><span class="s1">(i % </span><span class="s2">2 </span><span class="s1">!= </span><span class="s2">0</span><span class="s1">) </span><span class="s3">&quot;Enter the coordinates X: &quot; </span><span class="s0">else </span><span class="s3">&quot;Enter the coordinates O: &quot;</span><span class="s1">)</span>
+            <span class="s0">val </span><span class="s1">coordinates = readLine()!!.split(</span><span class="s3">&quot; &quot;</span><span class="s1">).toMutableList()</span>
+            <span class="s1">coordinates.add(</span><span class="s3">&quot;&quot;</span><span class="s1">)</span>
+            <span class="s1">coordinates.add(</span><span class="s3">&quot;&quot;</span><span class="s1">)</span>
+            <span class="s0">if </span><span class="s1">(coordinates.size != </span><span class="s2">4 </span><span class="s1">|| coordinates[</span><span class="s2">0</span><span class="s1">].length != </span><span class="s2">1 </span><span class="s1">|| coordinates[</span><span class="s2">1</span><span class="s1">].length != </span><span class="s2">1 </span><span class="s1">||</span>
+                <span class="s1">coordinates[</span><span class="s2">0</span><span class="s1">].first().toInt() &lt; </span><span class="s2">48 </span><span class="s1">|| coordinates[</span><span class="s2">0</span><span class="s1">].first().toInt() &gt; </span><span class="s2">57 </span><span class="s1">||</span>
+                <span class="s1">coordinates[</span><span class="s2">1</span><span class="s1">].first().toInt() &lt; </span><span class="s2">48 </span><span class="s1">|| coordinates[</span><span class="s2">1</span><span class="s1">].first().toInt() &gt; </span><span class="s2">57</span>
+            <span class="s1">) {</span>
+                <span class="s1">println(</span><span class="s3">&quot;You should enter numbers!&quot;</span><span class="s1">)</span>
+            <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+
+                <span class="s1">x = coordinates[</span><span class="s2">0</span><span class="s1">].toInt()</span>
+                <span class="s1">y = coordinates[</span><span class="s2">1</span><span class="s1">].toInt()</span>
+                <span class="s0">if </span><span class="s1">(x </span><span class="s0">in </span><span class="s2">1</span><span class="s1">..</span><span class="s2">3 </span><span class="s1">&amp;&amp; y </span><span class="s0">in </span><span class="s2">1</span><span class="s1">..</span><span class="s2">3</span><span class="s1">) {</span>
+                    <span class="s0">if </span><span class="s1">(x == </span><span class="s2">1 </span><span class="s1">&amp;&amp; y == </span><span class="s2">1</span><span class="s1">) {</span>
+                        <span class="s0">if </span><span class="s1">(a[</span><span class="s2">0</span><span class="s1">] == </span><span class="s3">' '</span><span class="s1">) {</span>
+                            <span class="s1">a[</span><span class="s2">0</span><span class="s1">] = </span><span class="s0">if </span><span class="s1">(i % </span><span class="s2">2 </span><span class="s1">!= </span><span class="s2">0</span><span class="s1">) </span><span class="s3">'X' </span><span class="s0">else </span><span class="s3">'O'</span>
+                            <span class="s0">break</span>
+                        <span class="s1">} </span><span class="s0">else </span><span class="s1">println(</span><span class="s3">&quot;This cell is occupied! Choose another one!&quot;</span><span class="s1">)</span>
+                    <span class="s1">}</span>
+                    <span class="s0">if </span><span class="s1">(x == </span><span class="s2">1 </span><span class="s1">&amp;&amp; y == </span><span class="s2">2</span><span class="s1">) {</span>
+                        <span class="s0">if </span><span class="s1">(a[</span><span class="s2">1</span><span class="s1">] == </span><span class="s3">' '</span><span class="s1">) {</span>
+                            <span class="s1">a[</span><span class="s2">1</span><span class="s1">] = </span><span class="s0">if </span><span class="s1">(i % </span><span class="s2">2 </span><span class="s1">!= </span><span class="s2">0</span><span class="s1">) </span><span class="s3">'X' </span><span class="s0">else </span><span class="s3">'O'</span>
+                            <span class="s0">break</span>
+                        <span class="s1">} </span><span class="s0">else </span><span class="s1">println(</span><span class="s3">&quot;This cell is occupied! Choose another one!&quot;</span><span class="s1">)</span>
+                    <span class="s1">}</span>
+                    <span class="s0">if </span><span class="s1">(x == </span><span class="s2">1 </span><span class="s1">&amp;&amp; y == </span><span class="s2">3</span><span class="s1">) {</span>
+                        <span class="s0">if </span><span class="s1">(a[</span><span class="s2">2</span><span class="s1">] == </span><span class="s3">' '</span><span class="s1">) {</span>
+                            <span class="s1">a[</span><span class="s2">2</span><span class="s1">] = </span><span class="s0">if </span><span class="s1">(i % </span><span class="s2">2 </span><span class="s1">!= </span><span class="s2">0</span><span class="s1">) </span><span class="s3">'X' </span><span class="s0">else </span><span class="s3">'O'</span>
+                            <span class="s0">break</span>
+                        <span class="s1">} </span><span class="s0">else </span><span class="s1">println(</span><span class="s3">&quot;This cell is occupied! Choose another one!&quot;</span><span class="s1">)</span>
+                    <span class="s1">}</span>
+                    <span class="s0">if </span><span class="s1">(x == </span><span class="s2">2 </span><span class="s1">&amp;&amp; y == </span><span class="s2">1</span><span class="s1">) {</span>
+                        <span class="s0">if </span><span class="s1">(a[</span><span class="s2">3</span><span class="s1">] == </span><span class="s3">' '</span><span class="s1">) {</span>
+                            <span class="s1">a[</span><span class="s2">3</span><span class="s1">] = </span><span class="s0">if </span><span class="s1">(i % </span><span class="s2">2 </span><span class="s1">!= </span><span class="s2">0</span><span class="s1">) </span><span class="s3">'X' </span><span class="s0">else </span><span class="s3">'O'</span>
+                            <span class="s0">break</span>
+                        <span class="s1">} </span><span class="s0">else </span><span class="s1">println(</span><span class="s3">&quot;This cell is occupied! Choose another one!&quot;</span><span class="s1">)</span>
+                    <span class="s1">}</span>
+                    <span class="s0">if </span><span class="s1">(x == </span><span class="s2">2 </span><span class="s1">&amp;&amp; y == </span><span class="s2">2</span><span class="s1">) {</span>
+                        <span class="s0">if </span><span class="s1">(a[</span><span class="s2">4</span><span class="s1">] == </span><span class="s3">' '</span><span class="s1">) {</span>
+                            <span class="s1">a[</span><span class="s2">4</span><span class="s1">] = </span><span class="s0">if </span><span class="s1">(i % </span><span class="s2">2 </span><span class="s1">!= </span><span class="s2">0</span><span class="s1">) </span><span class="s3">'X' </span><span class="s0">else </span><span class="s3">'O'</span>
+                            <span class="s0">break</span>
+                        <span class="s1">} </span><span class="s0">else </span><span class="s1">println(</span><span class="s3">&quot;This cell is occupied! Choose another one!&quot;</span><span class="s1">)</span>
+                    <span class="s1">}</span>
+                    <span class="s0">if </span><span class="s1">(x == </span><span class="s2">2 </span><span class="s1">&amp;&amp; y == </span><span class="s2">3</span><span class="s1">) {</span>
+                        <span class="s0">if </span><span class="s1">(a[</span><span class="s2">5</span><span class="s1">] == </span><span class="s3">' '</span><span class="s1">) {</span>
+                            <span class="s1">a[</span><span class="s2">5</span><span class="s1">] = </span><span class="s0">if </span><span class="s1">(i % </span><span class="s2">2 </span><span class="s1">!= </span><span class="s2">0</span><span class="s1">) </span><span class="s3">'X' </span><span class="s0">else </span><span class="s3">'O'</span>
+                            <span class="s0">break</span>
+                        <span class="s1">} </span><span class="s0">else </span><span class="s1">println(</span><span class="s3">&quot;This cell is occupied! Choose another one!&quot;</span><span class="s1">)</span>
+                    <span class="s1">}</span>
+                    <span class="s0">if </span><span class="s1">(x == </span><span class="s2">3 </span><span class="s1">&amp;&amp; y == </span><span class="s2">1</span><span class="s1">) {</span>
+                        <span class="s0">if </span><span class="s1">(a[</span><span class="s2">6</span><span class="s1">] == </span><span class="s3">' '</span><span class="s1">) {</span>
+                            <span class="s1">a[</span><span class="s2">6</span><span class="s1">] = </span><span class="s0">if </span><span class="s1">(i % </span><span class="s2">2 </span><span class="s1">!= </span><span class="s2">0</span><span class="s1">) </span><span class="s3">'X' </span><span class="s0">else </span><span class="s3">'O'</span>
+                            <span class="s0">break</span>
+                        <span class="s1">} </span><span class="s0">else </span><span class="s1">println(</span><span class="s3">&quot;This cell is occupied! Choose another one!&quot;</span><span class="s1">)</span>
+                    <span class="s1">}</span>
+                    <span class="s0">if </span><span class="s1">(x == </span><span class="s2">3 </span><span class="s1">&amp;&amp; y == </span><span class="s2">2</span><span class="s1">) {</span>
+                        <span class="s0">if </span><span class="s1">(a[</span><span class="s2">7</span><span class="s1">] == </span><span class="s3">' '</span><span class="s1">) {</span>
+                            <span class="s1">a[</span><span class="s2">7</span><span class="s1">] = </span><span class="s0">if </span><span class="s1">(i % </span><span class="s2">2 </span><span class="s1">!= </span><span class="s2">0</span><span class="s1">) </span><span class="s3">'X' </span><span class="s0">else </span><span class="s3">'O'</span>
+                            <span class="s0">break</span>
+                        <span class="s1">} </span><span class="s0">else </span><span class="s1">println(</span><span class="s3">&quot;This cell is occupied! Choose another one!&quot;</span><span class="s1">)</span>
+                    <span class="s1">}</span>
+                    <span class="s0">if </span><span class="s1">(x == </span><span class="s2">3 </span><span class="s1">&amp;&amp; y == </span><span class="s2">3</span><span class="s1">) {</span>
+                        <span class="s0">if </span><span class="s1">(a[</span><span class="s2">8</span><span class="s1">] == </span><span class="s3">' '</span><span class="s1">) {</span>
+                            <span class="s1">a[</span><span class="s2">8</span><span class="s1">] = </span><span class="s0">if </span><span class="s1">(i % </span><span class="s2">2 </span><span class="s1">!= </span><span class="s2">0</span><span class="s1">) </span><span class="s3">'X' </span><span class="s0">else </span><span class="s3">'O'</span>
+                            <span class="s0">break</span>
+                        <span class="s1">} </span><span class="s0">else </span><span class="s1">println(</span><span class="s3">&quot;This cell is occupied! Choose another one!&quot;</span><span class="s1">)</span>
+                    <span class="s1">}</span>
+                <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s1">println(</span><span class="s3">&quot;Coordinates should be from 1 to 3!&quot;</span><span class="s1">)</span>
+                <span class="s1">}</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+
+        <span class="s1">printGrid(a)</span>
+
+        <span class="s0">if </span><span class="s1">(wins(</span><span class="s3">&quot;x&quot;</span><span class="s1">, a)) {</span>
+            <span class="s1">println(</span><span class="s3">&quot;X wins&quot;</span><span class="s1">)</span>
+            <span class="s0">break</span>
+        <span class="s1">}</span>
+        <span class="s0">else if </span><span class="s1">(wins(</span><span class="s3">&quot;o&quot;</span><span class="s1">, a)) {</span>
+            <span class="s1">println(</span><span class="s3">&quot;O wins&quot;</span><span class="s1">)</span>
+            <span class="s0">break</span>
+        <span class="s1">}</span>
+        <span class="s0">else if </span><span class="s1">(!a.contains(</span><span class="s3">' '</span><span class="s1">) &amp;&amp; !wins(</span><span class="s3">&quot;x&quot;</span><span class="s1">, a) &amp;&amp; !wins(</span><span class="s3">&quot;o&quot;</span><span class="s1">, a)) {</span>
+            <span class="s1">println(</span><span class="s3">&quot;Draw&quot;</span><span class="s1">)</span>
+            <span class="s0">break</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
